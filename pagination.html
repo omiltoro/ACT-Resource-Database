@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<link href="database/assets/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="database/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="database/assets/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="database/assets/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="database/assets/css/jquery-ui-1.10.2.custom.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="database/assets/css/stream.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="database/assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="database/assets/js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
+    <script src="../dist/filter.js" type="text/javascript"></script>
+    <script src="database/data/cont_act.js" type="text/javascript"></script>
+    <script src="database/ecaf.js" type="text/javascript"></script>
+    <script src="pagination.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+	<div class="header-wrapper">
+        <div class="container">
+            <div class="header-inner">
+                <div class="header-logo" style="padding:0;">
+                    <a href="Conservation Agriculture Database.html">
+                        <img src="database/assets/img/ACT.png" alt="European Conservation Agriculture Federation" style="width: 10%;float:left;" />
+                        <span style="width: 76%; display: block; float: left; margin-top: 38px; text-align: center;">MAKING CLIMATE SMART AGRICULTURE REAL WITH CONSERVATION AGRICULTURE</span>
+                        <!--<img src="database/assets/img/life.jpg" alt="Logotipo de Life" style="width: 10%; float: left; margin-top: 10px;"  />-->
+                    </a>
+                </div><!-- /.header-logo -->
+
+                
+            </div><!-- /.header-inner -->
+        </div><!-- /.container -->
+    </div>
+	<div>
+	<img src="http://act-africa.org/image/gallery/00326_dscn3740.jpg" width="100%" height="400"/>
+
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+      <!-- Content -->
+     
+      <!-- Content -->
+
+    </div>
+    <!-- Mask & flexbox options-->
+
+  </div>
+      <h1 class="title">Conservation Agriculture Knowledge Hub</h1>
+      <div class="sidebar col-md-3">
+        <div>
+          <h4 class='col-md-6'>Resources (<span id="total_movies">0</span>)</h4>
+          <div class="col-md-6 progress">
+            <div class="progress-bar" id="stream_progress" style="width: 0%;">0%</div>
+          </div>
+        </div>
+        <div>
+          <label class="sr-only" for="searchbox">Search</label>
+          <input type="text" class="form-control" id="searchbox" placeholder="Search &hellip;" autocomplete="off">
+          <span class="glyphicon glyphicon-search search-icon"></span>
+        </div>
+        <br>
+                
+        <div class="well">
+            <fieldset id="year_criteria">
+                <legend>Topic</legend>
+                <select class="form-control" id="year_filter">
+                    <option value="all">All </option>
+                    <option value="Mechanization">Mechanization</option>
+                    <option value="1931-1940">2 WT</option>
+                    <option value="1941-1950">Soil</option>
+                    <option value="1951-1960">CA Livestock</option>
+                    <option value="1961-1970">1961 - 1970</option>
+                    <option value="1971-1980">1971 - 1980</option>
+                    <option value="1981-1990">1981 - 1990</option>
+                    <option value="1991-2000">1991 - 2000</option>
+                    <option value="2001-2010">2001 - 2010</option>
+                    <option value="2011-2020">2011 - 2020</option>
+                </select>
+            </fieldset>
+        </div>
+        <div class="well">
+            <fieldset id="genre_criteria">
+                <legend>Category</legend>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="All" id="all_genre">
+                    <span>All</span>
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="Books and Manuals">
+                    <span>Books and Manuals<span>
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="Scientific Journals">
+                    <span>Scientific Journals</span>
+                  </label>
+                </div>
+				<div class="checkbox">
+                    <label>
+                    <input type="checkbox" value="Case Study">
+                    <span> Case study </span>
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="Reports">
+                    <span>Reports</span> 
+                   </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="Brochure">
+                    <span> Brochure </span>
+                  </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                    <input type="checkbox" value="Technical Papers">
+                    <span> Technical Papers</span>
+                  </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                    <input type="checkbox" value="Video">
+                    <span> Video</span>
+                  </label>
+                </div>
+               
+            </fieldset>
+        </div>
+    </div>
+
+<!-- /.col-md-3 -->
+    <div class="col-md-9">
+      <div class="row">
+        <div class="content col-md-12">
+          <div id="pagination" class="movies-pagination col-md-11"></div>
+          <div class="col-md-1 content">
+            Per Page: <span id="per_page" class="content"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="movies row" id="movies" style="background-color: rgb(255, 255, 255);"> </div>
+    </div>
+<!-- /.col-md-9 -->
+</div>
+<!-- /.container -->
+
+      <script id="movie-template" type="text/html">
+      <div class="card-row access_<%= free_access %>">
+            <div class="card-row-inner">
+                <div style="background-image: url(&quot;<%= img %>&quot;);" class="card-row-image" data-background-image="<%= img %>">
+                	<div class="<%= idioma %>"></div><div class="card-row-label"><%= idioma %></div>
+                    <!--<div class="card-row-label"><%= main_topic %></div>
+                    <div class="card-row-label1"><%= sub_topic %></div>
+                        <div class="card-row-price"><%= category %></div>-->
+                    
+                </div><!-- /.card-row-image -->
+
+                <div class="card-row-body">
+                	<div class="card-row-content" style="float:left; margin-right: 2%; color:#446A24;margin-bottom: 3px;"><strong style="color:#8e8181;">MAIN TOPIC: </strong><%= main_topic %></div>
+                    <div class="card-row-content" style="float:left; margin-right: 2%; color:#446A24;margin-bottom: 3px;"><strong style="color:#8e8181;">SUB TOPIC: </strong><%= sub_topic %></div>
+                    <div class="card-row-content" style="float:left; margin-right: 2%; color:#446A24;margin-bottom: 3px;"><strong style="color:#8e8181;">CATEGORY: </strong><%= category %></div>
+                    <h2 class="card-row-title" style="margin: 10px 0;"><a href="<%= content %>" target="_blank"><%= reference %></a></h2>
+                    <div class="card-row-content" style="float:left; margin-right: 2%; color:#446A24;margin-bottom: 3px;"><strong style="color:#8e8181;">DOI: </strong><%= doi %></div>
+                    <div class="card-row-content" style="float:left; margin-right: 2%; color:#446A24;margin-bottom: 3px;"><strong style="color:#8e8181;">ISBN: </strong><%= isbn %></div>
+                    <div class="card-row-content" style="float:left; margin-right: 2%; color:#446A24;margin-bottom: 3px;"><strong style="color:#8e8181;">FREE ACCESS: </strong><%= free_access %></div>
+                    <div class="card-row-content" style="width:100%; float:left;margin-top: 10px">
+                    	<p style="margin-bottom: 0px;"><strong>ABSTRACT: </strong></p>
+                    	<p><%= abstract %></p>
+                    </div><!-- /.card-row-content -->
+                    <a class="<%= read_more %>" href="#modal<%= id %>">Read More</a>
+                    
+                </div><!-- /.card-row-body -->
+                <div id="modal<%= id %>" class="modalmask">
+				    <div class="modalbox movedown">
+				        <a href="#close" title="Close" class="close">X</a>
+				        <h2 class="card-row-title" style="margin: 10px 0;"><a href="<%= content %>" target="_blank"><%= reference %></a></h2>
+				        <p style="margin-bottom: 0px;"><strong>ABSTRACT: </strong></p>
+                    	<p><%= abstract %></p>
+                    	<p><%= more %></p>
+				    </div>
+				</div>
+            </div><!-- /.card-row-inner -->
+        </div>
+      </script>
+      
+  
+      <script id="genre_template" type="text/html">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="<%= genre %>"> <%= genre %>
+          </label>
+        </div>
+      </script>
+    </body>
+  </html>
